@@ -1,0 +1,653 @@
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="trackers/sm64.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div id="container">
+    <div id="game_specific">
+        <div class="sm-bg">
+            <table class="sm64-table">
+                <tr>
+                    <td>
+                        <img class="sm64-ability" data-ability="back-flip" src="trackers/sm64/mario/Back-Flip.png" />
+                        <div>Back-Flip</div>
+                        <div class="status"></div>
+                    </td>
+                    <td>
+                        <img class="sm64-ability" data-ability="climb" src="trackers/sm64/mario/Climb.png" />
+                        <div>Climb</div>
+                        <div class="status"></div>
+                    </td>
+                    <td>
+                        <img class="sm64-ability" data-ability="dive" src="trackers/sm64/mario/Dive.png" />
+                        <div>Dive</div>
+                        <div class="status"></div>
+                    </td>
+                    <td>
+                        <img class="sm64-ability" data-ability="ground-pound"
+                            src="trackers/sm64/mario/Ground-Pound.png" />
+                        <div>Ground-Pound</div>
+                        <div class="status"></div>
+                    </td>
+                    <td>
+                        <img class="sm64-ability" data-ability="kick" src="trackers/sm64/mario/Kick.png" />
+                        <div>Kick</div>
+                        <div class="status"></div>
+                    </td>
+                    <td>
+                        <img class="sm64-ability" data-ability="ledge-grab" src="trackers/sm64/mario/Ledge-Grab.png" />
+                        <div>Ledge-Grab</div>
+                        <div class="status"></div>
+                    </td>
+                    <td>
+                        <img class="sm64-ability" data-ability="long-jump" src="trackers/sm64/mario/Long-Jump.png" />
+                        <div>Long-Jump</div>
+                        <div class="status"></div>
+                    </td>
+                    <td>
+                        <img class="sm64-ability" data-ability="side-flip" src="trackers/sm64/mario/Side-Flip.png" />
+                        <div>Side-Flip</div>
+                        <div class="status"></div>
+                    </td>
+                    <td>
+                        <img class="sm64-ability" data-ability="triple-jump"
+                            src="trackers/sm64/mario/Triple-Jump.png" />
+                        <div>Triple-Jump</div>
+                        <div class="status"></div>
+                    </td>
+                    <td>
+                        <img class="sm64-ability" data-ability="wall-kick" src="trackers/sm64/mario/Wall-Kick.png" />
+                        <div>Wall-Kick</div>
+                        <div class="status"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="sm64-ability" data-cap="metal" src="trackers/sm64/boxes/MetalCap.png" />
+                        <div>Metal Cap</div>
+                        <div class="status"></div>
+                    </td>
+                    <td>
+                        <img class="sm64-ability" data-cap="wing" src="trackers/sm64/boxes/WingCap.png" />
+                        <div>Wing Cap</div>
+                        <div class="status"></div>
+                    </td>
+                    <td>
+                        <img class="sm64-ability" data-cap="vanish" src="trackers/sm64/boxes/VanishCap.png" />
+                        <div>Vanish Cap</div>
+                        <div class="status"></div>
+                    </td>
+                    <td>
+                        <img class="sm64-key" data-key="1" src="trackers/sm64/settings/Key.png" />
+                        <div>Basement</div>
+                        <div class="status">
+                            <img data-mips="1" class="mips" src="trackers/sm64/mips.png">
+                            <img data-mips="2" class="mips" src="trackers/sm64/mips.png">
+                            <img data-toad="Basement" class="mips" src="trackers/sm64/toad.png">
+                        </div>
+                    </td>
+                    <td>
+                        <img class="sm64-key" data-key="2" src="trackers/sm64/settings/Key.png" />
+                        <div>2nd Floor</div>
+                        <div class="status">
+                            <img data-toad="Second Floor" class="mips" src="trackers/sm64/toad.png">
+                        </div>
+                    </td>
+                    <td>
+                        <img class="sm64-ability obtained" src="trackers/sm64/varios/PowerStarModelSM64.png" />
+                        <div data-fill="power_stars"></div>
+                        <div class="status"></div>
+                    </td>
+                    <td>
+                        <img class="sm64-door" data-door="FirstBowserDoorCost" src="trackers/sm64/door.png" />
+                        <div>First Floor</div>
+                        <div class="status"></div>
+                    </td>
+                    <td>
+                        <img class="sm64-door" data-door="BasementDoorCost" src="trackers/sm64/door.png" />
+                        <div>Basement</div>
+                        <div class="status"></div>
+                    </td>
+                    <td>
+                        <img class="sm64-door" data-door="SecondFloorDoorCost" src="trackers/sm64/door.png" />
+                        <div>2nd Floor</div>
+                        <div class="status">
+                            <img data-toad="Third Floor" class="mips" src="trackers/sm64/toad.png">
+                        </div>
+                    </td>
+                    <td>
+                        <img class="sm64-door" data-door="StarsToFinish" src="trackers/sm64/door.png" />
+                        <div>Final Bowser</div>
+                        <div class="status"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="sm64-level" data-floor="1" data-lvl="91" data-prefix="BoB: "
+                            src="trackers/sm64/paintings/Bob-omb Battlefield Painting.png" />
+                    </td>
+                    <td>
+                        <img class="sm64-level" data-floor="1" data-lvl="121" data-prefix="JRB: "
+                            src="trackers/sm64/paintings/Jolly Roger Bay Painting.png" />
+                    </td>
+                    <td>
+                        <img class="sm64-level" data-floor="1" data-lvl="201" data-prefix="The Secret"
+                            src="trackers/sm64/paintings/The Secret Aquarium Painting.png" />
+                    </td>
+                    <td>
+                        <img class="sm64-level" data-floor="1" data-lvl="241" data-prefix="WF: "
+                            src="trackers/sm64/paintings/Whomp's Fortress Painting.png" />
+                    </td>
+                    <td>
+                        <img class="sm64-level" data-floor="1" data-lvl="271" data-prefix="The Princess's"
+                            src="trackers/sm64/paintings/The Princess's Secret Slide Painting.png" />
+                    </td>
+                    <td>
+                        <img class="sm64-level" data-floor="1" data-lvl="291" data-prefix="Tower"
+                            src="trackers/sm64/paintings/Tower of the Wing Cap Painting.png" />
+                    </td>
+                    <td>
+                        <img class="sm64-level" data-floor="1" data-lvl="41" data-prefix="BBH: "
+                            src="trackers/sm64/paintings/Big Boo's Haunt Painting.png" />
+                    </td>
+                    <td>
+                        <img class="sm64-level" data-floor="1" data-lvl="51" data-prefix="CCM: "
+                            src="trackers/sm64/paintings/Cool, Cool Mountain Painting.png" />
+                    </td>
+                    <td>
+                        <img class="sm64-level" data-floor="1" data-lvl="171" data-prefix="Bowser in the Dark World "
+                            src="trackers/sm64/paintings/Bowser in the Dark World Painting.png" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="sm64-level" data-floor="2" data-lvl="231" data-prefix="DDD: "
+                            src="trackers/sm64/paintings/Dire, Dire Docks Painting.png" />
+                    </td>
+                    <td>
+                        <img class="sm64-level" data-floor="2" data-lvl="71" data-prefix="HMC: "
+                            src="trackers/sm64/paintings/Hazy Maze Cave Painting.png" />
+                    </td>
+                    <td>
+                        <img class="sm64-level" data-floor="2" data-lvl="281" data-prefix="Cavern"
+                            src="trackers/sm64/paintings/Cavern of the Metal Cap Painting.png" />
+                    </td>
+                    <td>
+                        <img class="sm64-level" data-floor="2" data-lvl="221" data-prefix="LLL: "
+                            src="trackers/sm64/paintings/Lethal Lava Land Painting.png" />
+                    </td>
+                    <td>
+                        <img class="sm64-level" data-floor="2" data-lvl="81" data-prefix="SSL: "
+                            src="trackers/sm64/paintings/Shifting Sand Land Painting.png" />
+                    </td>
+                    <td>
+                        <img class="sm64-level" data-floor="2" data-lvl="181" data-prefix="Vanish Cap Under the Moat"
+                            src="trackers/sm64/paintings/Vanish Cap Under the Moat Painting.png" />
+                    </td>
+                    <td>
+                        <img class="sm64-level" data-floor="2" data-lvl="191" data-prefix="Bowser in the Fire Sea "
+                            src="trackers/sm64/paintings/Bowser in the Fire Sea Painting.png" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="sm64-level" data-floor="3" data-lvl="101" data-prefix="SL: "
+                            src="trackers/sm64/paintings/Snowman's Land Painting.png" />
+                    </td>
+                    <td>
+                        <img class="sm64-level" data-floor="3" data-lvl="361" data-prefix="TTM: "
+                            src="trackers/sm64/paintings/Tall, Tall Mountain Painting.png" />
+                    </td>
+                    <td>
+                        <img class="sm64-level" data-floor="3" data-lvl="131" data-prefix="THI: "
+                            src="trackers/sm64/paintings/Tiny-Huge Island Painting.png" />
+                    </td>
+                    <td>
+                        <img class="sm64-level" data-floor="3" data-lvl="111" data-prefix="WDW: "
+                            src="trackers/sm64/paintings/Wet-Dry World Painting.png" />
+                    </td>
+                    <td>
+                        <img class="sm64-level" data-floor="3" data-lvl="311" data-prefix="Wing Mario Over the Rainbow"
+                            src="trackers/sm64/paintings/Wing Mario Over the Rainbow Painting.png" />
+                    </td>
+                    <td>
+                        <img class="sm64-level" data-floor="3" data-lvl="141" data-prefix="TTC: "
+                            src="trackers/sm64/paintings/Tick Tock Clock Painting.png" />
+                    </td>
+                    <td>
+                        <img class="sm64-level" data-floor="3" data-lvl="151" data-prefix="RR: "
+                            src="trackers/sm64/paintings/Rainbow Ride Painting.png" />
+                    </td>
+                    <td>
+                        <img class="sm64-level" data-floor="3" data-lvl="1" data-prefix="Bowser in the Sky "
+                            src="trackers/sm64/paintings/Bowser in the Sky Painting.png" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <input class="w3-input non-broadcast" type="text" id="search" onkeyup="updateDisplay()">
+
+</div>
+
+<script>
+    if (!Object.groupBy) {
+        Object.groupBy = function groupBy(array, selector) {
+            let ret = {};
+            for (let val of array) {
+                let sel = selector(val);
+                if (!ret[sel])
+                    ret[sel] = []
+                ret[sel].push(val);
+            }
+            return ret;
+        }
+    }
+    if (!Array.prototype.toSorted) {
+        Array.prototype.toSorted = function toSorted(sortedOn) {
+            let copyArr = this.map(x => x);
+            copyArr.sort(sortedOn);
+            return copyArr;
+        }
+    }
+
+    function goBack() {
+        document.location.href = document.location.href.split("/").reverse().slice(1).reverse().join("/");
+    }
+
+    function table(id, data) {
+        let container = $("#container");
+        let columns = data.columns;//string[]
+
+        let tbl = container.find("#" + id);
+        if (tbl.length == 0) {
+            let accordeon = $("<details>").addClass("non-broadcast");
+            accordeon.append($("<summary>").addClass("w3-teal").text(id))
+            if (!data.spoiler)
+                accordeon.attr("open", "open");
+
+            let table_container = $("<div>").addClass("table-container")
+            tbl = $("<table>").attr("id", id).addClass("w3-table w3-striped w3-border");
+            table_container.append(tbl);
+            accordeon.append(table_container)
+            container.append(accordeon)
+        }
+
+        tbl.data("data", data);
+        if (!tbl.data("sort")) {
+            tbl.data("sort", columns[0]);
+            tbl.data("sort-dir", "UP")
+        }
+
+        let sorting_on = tbl.data("sort");
+        let content = data.content;
+        let dir = tbl.data("sort-dir");
+
+        function sortedOn(a, b) {
+            if (dir == "UP") {
+                if (a[sorting_on].localeCompare)
+                    return a[sorting_on].localeCompare(b[sorting_on])
+                else return a[sorting_on] - b[sorting_on]
+            }
+            else {
+                if (b[sorting_on].localeCompare)
+                    return b[sorting_on].localeCompare(a[sorting_on])
+                else return b[sorting_on] - a[sorting_on]
+            }
+        }
+        let dataCopy = content.map(x => x).toSorted(sortedOn);
+        let searchBox = $("#search");
+        let searchFilter = searchBox.val();
+        function filter(data) {
+            if (!searchFilter || searchFilter.length == 0)
+                return true;
+
+            let valid = false;
+            for (let val of Object.values(data)) {
+                if (val.includes && val.toLowerCase().includes(searchFilter.toLowerCase()))
+                    valid = true;
+            }
+            return valid;
+        }
+        dataCopy = dataCopy.filter(filter);
+        //Attempt to add the header
+        if (tbl.find("thead").length == 0) {
+            let thead = $("<thead>").addClass("w3-blue");
+            let tr = $("<tr>");
+            thead.append(tr);
+
+            for (let column of columns) {
+                (function (column) {
+                    let td = $("<td>");
+                    td.text(column);
+
+                    td.click(function () {
+                        let data = tbl.data("data");
+                        let current_sort = tbl.data("sort");
+                        if (current_sort == column) {
+                            //Swap it from ascending to descending and back
+                            tbl.data("sort-dir", { "UP": "DOWN", "DOWN": "UP" }[tbl.data("sort-dir")]);
+                        }
+                        tbl.data("sort", column)
+                        table(id, data);
+                    })
+                    tr.append(td);
+                })(column)
+            }
+            tbl.append(thead);
+        }
+
+        if (tbl.find("tbody").length == 0) {
+            tbl.append($("<tbody>"));
+        }
+
+        let tbody = tbl.find("tbody");
+        let trs = tbody.find("tr");
+        dataCopy.forEach((element, idx) => {
+            //Create TR and put all columns ... oops, must reuse if possible
+            if (trs[idx]) {
+                let tr = $(trs[idx]);
+                columns.forEach((col, i) => {
+                    $(tr.find("td")[i]).text(element[col]);
+                })
+            }
+            else {
+                let tr = $("<tr>");
+                tbody.append(tr);
+
+                for (let column of columns) {
+                    let td = $("<td>");
+                    if (td.text() != element[column])
+                        td.text(element[column]);
+                    tr.append(td);
+                }
+            }
+        });
+        trs.slice(dataCopy.length).detach();
+    }
+</script>
+
+<script src="archipelago.js"></script>
+<script src="config.js"></script>
+<script src="trackers/sm64.js"></script>
+<script type="module">
+
+    let game_package = null;
+    let received = [];
+    let our_game = null;
+    let hints = null;
+    let specific_init = false;
+
+    async function connect() {
+
+        let connect_info = {
+            hostname: config.server, // Replace with the actual AP server hostname.
+            port: config.port, // Replace with the actual AP server port.
+            game: config.game, // Replace with the game name for this player.
+            name: config.username, // Replace with the player slot name.
+            items_handling: AP.ITEMS_HANDLING_FLAGS.REMOTE_ALL,
+            tags: ["Tracker", "AP"],
+            password: config.password,
+            version: {
+                major: 0,
+                minor: 5,
+                build: 0
+            }
+        };
+
+        let ap_client = new AP.Client();
+        let connect_packet = await ap_client.connect(connect_info).catch(console.error);
+        console.log("Connected to AP server")
+        ap_client.addListener("PacketReceived", handlePacket)
+        ap_client.addListener("DataPackage", handlePacket)
+        ap_client.send({
+            cmd: "GetDataPackage",
+            games: ap_client.data.games,
+        });
+
+        handlePacket({ cmd: "connect_packet", received: connect_packet })
+        handlePacket({ cmd: "Received", received: ap_client.items.received })
+        handlePacket({ cmd: "Hints", received: ap_client.hints.mine })
+        handlePacket({ cmd: "Package", package: ap_client.data.package })
+        // Disconnect from the server when unloading window.
+        window.addEventListener("beforeunload", () => {
+            ap_client.disconnect();
+        });
+
+        function handlePacket(e) {
+            try {
+                let data = e;
+                console.log("Packet ", data.cmd)
+
+                if (data.cmd == "DataPackage") {
+                    game_package = window.game_package = data.data;
+                    updateDisplay();
+                }
+                else if (data.cmd == "Received") {
+                    received = window.received = data.received;
+                    updateDisplay();
+                }
+                else if (data.cmd == "ReceivedItems") {
+                    //Update received items
+                    if (data.index == 0)
+                        received.splice(0, received.length);
+                    for (const item of data.items) {
+                        received.push(item);
+                    }
+
+                    updateDisplay();
+                }
+                else if (data.cmd == "connect_packet") {
+                    our_game = window.our_game = data.received;
+                    if (!our_game.completed_locations)
+                        our_game.completed_locations = []
+                    if (!our_game.missing_locations)
+                        our_game.missing_locations = []
+                    updateDisplay();
+                }
+                else if (data.cmd == "RoomUpdate") {
+                    console.log("RoomUpdate", data)
+                    if (data.checked_locations) {
+                        for (let location of data.checked_locations) {
+                            if (our_game) {
+                                let index = our_game.missing_locations.indexOf(location);
+                                if (index !== -1) {
+                                    our_game.missing_locations.splice(index, 1);
+                                    our_game.checked_locations.push(location);
+                                }
+                            }
+                        }
+                    }
+                    updateDisplay();
+                }
+                else if (data.cmd == "Retrieved") {
+                    for (const key in data.keys) {
+                        if (our_game) {
+                            if (key !== `_read_hints_${our_game.team}_${our_game.slot}`) {
+                                continue;
+                            }
+                            hints = window.hints = data.keys[key];
+                        }
+                        //this.#hints = packet.keys[key] as Hint[];
+                    }
+                    updateDisplay();
+                }
+                else if (data.cmd == "SetReply") {
+                    let key = data.key;
+                    if (key !== `_read_hints_${our_game.team}_${our_game.slot}`) {
+                        return;
+                    }
+                    hints = window.hints = data.value;
+                    //this.#hints = packet.keys[key] as Hint[];
+                    updateDisplay();
+                }
+                else {
+                    console.log('Unknown Message:', e.data);
+                    updateDisplay();
+                }
+            }
+            catch (err) {
+                console.log('Message:', e.data, err);
+            }
+        };
+
+
+    }
+    connect();
+    setInterval(updateDisplay, 1000);
+    window.updateDisplay = updateDisplay;
+    function updateDisplay() {
+        try {
+            //our_game.checked_locations
+            //our_game.missing_locations
+            //Convert them to names
+            try {
+                if (window.specificUpdate) window.specificUpdate();
+            }
+            catch { }
+
+            if (our_game && game_package) {
+                let game_name = window.our_game.slot_info[window.our_game.slot].game;
+
+                table("locations", {
+                    columns: ["Name", "Checked"], content: [
+                        ...window.our_game.checked_locations.map(x => { return { Name: window.game_package.games[game_name].location_id_to_name[x], Checked: "Found" } }),
+                        ...window.our_game.missing_locations.map(x => { return { Name: window.game_package.games[game_name].location_id_to_name[x], Checked: "" } })
+                    ]
+                })
+            }
+        } catch (err) {
+            console.error(err);
+        } try {
+            if (our_game && received && game_package) {
+                let game_name = our_game.slot_info[our_game.slot].game;
+                let count = Object.groupBy(received, (x) => x.item);
+                try {
+                    table("received", {
+                        columns: ["Name", "Amount"], content: [
+                            ...Object.keys(count).map(x => { return { Name: game_package.games[game_name].item_id_to_name[x], Amount: count[x].length } })
+                        ]
+                    });
+                }
+                catch { }
+            }
+        } catch (err) {
+            console.error(err);
+        } try {
+            if (hints && our_game && game_package) {
+                table("hints", {
+                    columns: ["Receiver", "Finder", "Location", "Item", "Found", "Entrance", "Importance"], content: [
+                        ...hints.map(x => {
+                            let game_name = window.our_game.slot_info[x.finding_player].game;
+                            let target_name = window.our_game.slot_info[x.receiving_player].game;
+                            return {
+                                Receiver: our_game.slot_info[x.receiving_player].name,
+                                Finder: our_game.slot_info[x.finding_player].name,
+                                Location: game_package.games[game_name].location_id_to_name[x.location],
+                                Item: game_package.games[target_name].item_id_to_name[x.item],
+                                Found: x.found ? "Found" : "",
+                                Entrance: x.entrance,
+                                Importance: { 0: "Filler", 1: "Progressive", 2: "Useful", 4: "Trap" }[x.item_flags] || "Filler"
+
+                            };
+                        }),
+                    ]
+                })
+            }
+        } catch (err) {
+            console.error(err);
+        } try {
+            if (our_game && game_package) {
+                let game_name = our_game.slot_info[our_game.slot].game;
+
+                table("spoiler_slot_data", {
+                    columns: ["Name", "Data"], spoiler: true, content: [
+                        ...Object.keys(our_game.slot_data).map(x => { return { Name: x, Data: JSON.stringify(our_game.slot_data[x]) } }),
+                    ]
+                })
+            }
+        } catch (err) {
+            console.error(err);
+        }
+    }
+</script>
+<script>
+    if (window.obs || window.obsstudio || document.location.href.includes("obsstudio")) {
+        $("body").addClass("obs");
+
+        let obs_log = (...msg) => {
+            while (document.querySelectorAll("div.log").length > 30) {
+                $($("div.log")[0]).detach();
+            }
+            $("body").append($("<div>").addClass("log").text(msg.map(x => JSON.stringify(x)).join()))
+        }
+        console.log = obs_log;
+        console.error = obs_log;
+
+        $("body").append($("<style>* { overflow: hidden;}</style>"))
+        // console.log = function (...a) {
+        //     document.write(...a.map(x => "" + x));
+        // }
+        // console.error = function (...a) {
+        //     document.write(...a.map(x => "" + x));
+        // }
+    }
+</script>
+<style>
+    body:not(.obs) {
+        background-color: mediumpurple;
+    }
+
+    .log {
+        color: transparent;
+    }
+
+    body.obs {
+        overflow: hidden;
+    }
+
+    body.obs * {
+        overflow: hidden;
+    }
+
+    .w3-striped tbody tr:nth-child(even) {
+        background-color: purple;
+    }
+
+    .w3-striped tbody {
+        color: white;
+    }
+</style>
+
+<style>
+    body.obs .non-broadcast {
+        display: none;
+    }
+
+    body:not(.obs) #container {
+        padding: 1cm;
+    }
+
+    .table-container {
+        max-height: 8cm;
+        min-height: 2cm;
+        display: block;
+        overflow: auto;
+        width: 100%;
+    }
+
+    details>summary {
+        list-style-type: none;
+        padding: 8px;
+    }
+
+    table {
+        box-sizing: border-box;
+    }
+
+    body.obs #inventory-table {
+        width: 100%;
+    }
+
+    body.obs #location-table {
+        width: 100%;
+    }
+</style>

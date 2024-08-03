@@ -1,0 +1,79 @@
+.sm-bg{
+    border-top: 2px solid #000000;
+    border-left: 2px solid #000000;
+    border-right: 2px solid #000000;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 3px 3px 10px;
+    background-color: rgb(60, 114, 157);
+    color:white;
+}
+.sm64-table{
+    width:100%;
+}
+.sm64-table td{
+    text-align: center;
+}
+.sm64-ability{
+    width:48px;
+    height: 48px;
+}
+.sm64-ability:not(.obtained){
+    opacity: 0.2;
+}
+.sm64-level{
+    width:48px;
+    height: 48px;
+}
+.sm64-level:not(.obtained){
+    opacity: 0.2;
+}
+.sm64-door:not(.obtained){
+    opacity: 0.2;
+}
+.sm64-door{
+    width:48px;
+}
+
+.sm64-key:not(.obtained){
+    opacity: 0.2;
+}
+.sm64-key{
+    width:48px;
+    height: 48px;
+}
+.status .coins{
+    width:16px;
+    height: 16px;
+}
+.status .cannon{
+    width:16px;
+    height: 16px;
+}
+.status .buddy{
+    width:16px;
+    height: 16px;
+}
+.status .coins:not(.completed){
+    opacity: 0.2;
+}
+.status .cannon:not(.obtained){
+    opacity: 0.2;
+}
+.status .buddy:not(.completed){
+    opacity: 0.2;
+}
+
+.mips:not(.obtained):not(.reachable){
+    display: none;
+}
+.mips{
+    width: 16px;
+    height: 16px;
+}
+.mips.reachable:not(.obtained){
+    opacity: 0.2;
+}
+div.status{
+    height: 24px;
+}
